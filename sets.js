@@ -21,14 +21,14 @@ const aredisjoined = (arr1,arr2) => {
  }
 
 }
-// console.log(aredisjoined(['are','rer','rrr'],["err","rrr","wewe"]))
+console.log(aredisjoined(['are','rer','rrr'],["err","rrr","wewe"]))
 
 
 const duplicateremove = (array) => {
    return Array.from(new Set(array))
 }
 
-// console.log(duplicateremove([1,3,4,5,6,7,3]));
+console.log(duplicateremove([1,3,4,5,6,7,3]));
 
 // let wordset = new Set()
 
@@ -56,32 +56,16 @@ const duplicateremove = (array) => {
 //  return lastuniqueword;
 
 
-  let arr = [1,3,4,2,3,4,5]
-  let op= []
-  for(let i = arr.length - 1; i>=0; i--){
-    op= op + arr[i]
-  }
+//   let arr = [1,3,4,2,3,4,5]
+//   let op= []
+//   for(let i = arr.length - 1; i>=0; i--){
+//     op= op + arr[i]
+//   }
  
 //    console.log(op)
 
-const sortcharacters = (input) => {
-    return [...input].sort.join("")
-}
-
-let sortedArray2 =  new Set();
-
-array2.forEach(element => {
-    sortedArray2.add(sortcharacters(element))
-});
 
 
-let result = [];
-for (let word of array1) {
-    let sortedWord = sortCharacters(word);
-    if (sortedWordsInArray2.has(sortedWord)) {
-        result.push(word);
-        anagramsMatched.add(word);
-    }
-}
 
-return result;
+
+
