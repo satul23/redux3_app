@@ -24,4 +24,15 @@ const factorial = (n) => {
 let string = "Hello,world!";
 let newString = string.slice(7, 12);
 
-console.log(newString)
+// console.log(newString)
+
+const recursivefun = (n) => {
+    if(n < 10){
+        return n;
+    }else{
+        return n % 10 + recursivefun(Math.floor(n / 10))
+    }
+}
+
+console.log(recursivefun(2345))
+
