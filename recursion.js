@@ -34,5 +34,53 @@ const recursivefun = (n) => {
     }
 }
 
-console.log(recursivefun(2345))
+// console.log(recursivefun(2345));
 
+  //factorial
+  //anagram
+  //palindrome
+
+ let arr = [11,22,33,44,55,66,77,88]
+
+  const recursivebinary = (arr, start, end, target) => {
+
+    if(start > end){
+        return -1;
+    }else if(start[arr] === target){
+        return start[arr];
+    }else if(end[arr] === target){
+        return end[arr];
+    }
+
+    let mid = Math.floor((start + end) / 2)
+
+    if(arr[mid] === target){
+        return mid;
+    }
+
+    if(arr[mid] > target){
+      return recursivebinary( arr, start, mid - 1, target)   
+    }
+    return recursivebinary(arr, mid + 1, end, target)
+  }
+
+  console.log(recursivebinary(arr, 0, arr.length - 1, 88))
+
+  const binarybyloop = (arr, target) => {
+    
+    let start = 0;
+    let end = arr.length - 1;
+
+    if(start[arr] === target) return start[arr];
+    if(end[arr] === target) return end[arr]; 
+
+    while( start <= end){
+        let mid = Math.floor((start + end) / 2)
+        if(arr[mid] === target) return mid;
+        if(arr[mid] < target) return start = mid + 1;
+        else end = mid - 1
+    }
+     return - 1;
+  }
+
+   console.log(binarybyloop(arr, 88))
